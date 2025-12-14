@@ -109,3 +109,9 @@ Sample Response:
 ]
 }
 ```
+
+## 🌍 Live Deployment (Railway)
+
+Backend deployed on Railway:
+
+🔗 https://restaurant-search-backend-production-39c9.up.railway.app/search/dishes?name=biryani&minPrice=150&maxPrice=300
