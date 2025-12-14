@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./seed.sql:/docker-entrypoint-initdb.d/seed.sql
+    ports:
+      - "3306:3306"
+
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - db
